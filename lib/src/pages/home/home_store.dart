@@ -18,7 +18,7 @@ class HomeStore extends ChangeNotifier {
     if (_currentPageIndex == 0) {
       Modular.to.navigate('/dashboard');
     } else if (_currentPageIndex == 1) {
-      Modular.to.navigate('/lists');
+      Modular.to.navigate('/lists/');
     } else if (_currentPageIndex == 2) {
       Modular.to.navigate('/settings');
     }
