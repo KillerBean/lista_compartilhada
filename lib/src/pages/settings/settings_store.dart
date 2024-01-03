@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
 class SettingsStore extends ChangeNotifier {
+  static final SettingsStore _instance = SettingsStore._();
+  factory SettingsStore() => SettingsStore._instance;
+  SettingsStore._();
+
   var _themeMode = ThemeMode.system;
 
   ThemeMode get themeMode => _themeMode;

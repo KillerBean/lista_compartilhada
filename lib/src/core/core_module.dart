@@ -4,6 +4,6 @@ import 'package:lista_compartilhada/src/pages/settings/settings_store.dart';
 class CoreModule extends Module {
   @override
   void exportedBinds(i) {
-    i.add(SettingsStore.new);
+    i.addSingleton(SettingsStore.new);
   }
 }
