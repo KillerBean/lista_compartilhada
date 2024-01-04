@@ -4,5 +4,5 @@ import 'package:lista_compartilhada/src/main_app_module.dart';
 import 'package:lista_compartilhada/src/main_app_widget.dart';
 
 void main() {
-  runApp(ModularApp(module: AppModule(), child: MainAppWidget()));
+  runApp(ModularApp(module: AppModule(), child: const MainAppWidget()));
 }

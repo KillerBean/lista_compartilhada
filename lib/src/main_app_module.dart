@@ -19,10 +19,18 @@ class AppModule extends Module {
 
   @override
   void routes(r) {
-    r.child('/', child: (context) => const HomePage(), children: [
-      ChildRoute('/dashboard', child: (context) => const DashboardPageWidget()),
-      ModuleRoute('/lists', module: ListsModule()),
-      ChildRoute('/settings', child: (context) => SettingsPageWidget()),
-    ]);
+    r.child('/',
+        child: (context) => const HomePage(),
+        //transition: TransitionType.leftToRightWithFade,
+        children: [
+          ChildRoute('/dashboard',
+              child: (context) => const DashboardPageWidget()),
+          ModuleRoute(
+            '/lists',
+            module: ListsModule(), //transition: TransitionType.upToDown
+          ),
+          ChildRoute('/settings',
+              child: (context) => const SettingsPageWidget()),
+        ]);
   }
 }
