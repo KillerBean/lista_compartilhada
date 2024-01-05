@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:lista_compartilhada/src/core/widgets/custom_list_tile.dart';
 import 'package:lista_compartilhada/src/pages/home/home_store.dart';
 
 class HomePage extends StatefulWidget {
@@ -33,7 +34,7 @@ class _HomePageState extends State<HomePage> {
               indicatorColor: Colors.blueGrey[200],
               selectedIndex: store.currentPageIndex,
               destinations: [
-                ListTile(
+                CustomListTile(
                   title: const Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -43,7 +44,7 @@ class _HomePageState extends State<HomePage> {
                   onTap: () => store.currentPageIndex = 0,
                   selected: (store.currentPageIndex == 0),
                 ),
-                ListTile(
+                CustomListTile(
                   title: const Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -53,7 +54,7 @@ class _HomePageState extends State<HomePage> {
                   onTap: () => store.currentPageIndex = 1,
                   selected: (store.currentPageIndex == 1),
                 ),
-                ListTile(
+                CustomListTile(
                   title: const Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
