@@ -14,7 +14,6 @@ class SettingsPageWidget extends StatelessWidget {
       builder: (context, child) => ListView(
         children: [
           const ListTile(
-            // dense: true,
             contentPadding: EdgeInsets.only(top: 8),
             title: Card(
               shape: BeveledRectangleBorder(),
