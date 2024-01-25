@@ -2,9 +2,25 @@ import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
 class HomeStore extends ChangeNotifier {
+  bool _forceModularPop = false;
   int _currentPageIndex = 0;
+  String? _goToPath;
   init() {
     _navigate();
+  }
+
+  bool get forceModularPop => _forceModularPop;
+  String? get goToPath => _goToPath;
+  clearForceModularPop() {
+    _forceModularPop = false;
+    _goToPath = null;
+    notifyListeners();
+  }
+
+  setForceModularPop(bool value, String path) {
+    _forceModularPop = value;
+    _goToPath = path;
+    notifyListeners();
   }
 
   int get currentPageIndex => _currentPageIndex;
