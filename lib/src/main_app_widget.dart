@@ -29,6 +29,10 @@ class _MainAppWidgetState extends State<MainAppWidget> {
           useMaterial3: true,
         ),
         routerConfig: Modular.routerConfig,
+        // builder: (context, child) {
+        //   return AuthBuilder(
+        //       authService: Modular.get<AuthService>(), child: child);
+        // },
       ),
     );
   }
